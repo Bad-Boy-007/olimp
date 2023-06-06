@@ -1,16 +1,3 @@
-class Employee:
-    def __init__(self, id, name=""):
-        self.id = id
-        self.name = name
-        self.subordinates = list()
-
-    def add_subordinate(self, subordinate):
-        self.subordinates.append(subordinate)
-
-    def __str__(self):
-        return self.id + ' ' + self.name
-
-
 def input_and_add(employees: dict, line):
     id = line.pop(0)
     if line:
@@ -24,6 +11,17 @@ def input_and_add(employees: dict, line):
         employees[id] = Employee(id, name)
     return employees[id]
 
+class Employee:
+    def __init__(self, id, name=""):
+        self.id = id
+        self.name = name
+        self.subordinates = list()
+
+    def add_subordinate(self, subordinate):
+        self.subordinates.append(subordinate)
+
+    def __str__(self):
+        return self.id + ' ' + self.name
 
 f = open('corporation xxx/input_s1_06.txt')
 
